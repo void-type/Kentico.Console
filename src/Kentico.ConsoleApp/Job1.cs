@@ -1,6 +1,6 @@
 using CMS.DocumentEngine;
 
-namespace Kentico.Cli;
+namespace Kentico.ConsoleApp;
 
 public static class Job1
 {

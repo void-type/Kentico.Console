@@ -7,7 +7,7 @@
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/src/Kentico.Cli/Kentico.Cli.csproj",
+        "${workspaceFolder}/src/Kentico.ConsoleApp/Kentico.ConsoleApp.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
@@ -19,7 +19,7 @@
       "type": "process",
       "args": [
         "publish",
-        "${workspaceFolder}/src/Kentico.Cli/Kentico.Cli.csproj",
+        "${workspaceFolder}/src/Kentico.ConsoleApp/Kentico.ConsoleApp.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],

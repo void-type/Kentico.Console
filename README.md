@@ -1,4 +1,4 @@
-# Kentico.Cli
+# Kentico.ConsoleApp
 
 This is a starting point for making a console app that interfaces with Kentico. Useful for integrations, migrations, data exploration, etc...
 

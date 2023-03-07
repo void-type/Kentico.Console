@@ -2,7 +2,7 @@
 using CMS.Core;
 using CMS.DataEngine;
 using Microsoft.Extensions.Configuration;
-using Kentico.Cli;
+using Kentico.ConsoleApp;
 
 // ---------------------------------------------
 // Target CMS API setup

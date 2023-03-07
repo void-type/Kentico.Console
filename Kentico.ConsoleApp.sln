@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B3184B57-5F0A-46C1-B26D-97A3AC864B9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kentico.Cli", "src\Kentico.Cli\Kentico.Cli.csproj", "{4B9EB32B-97A0-44FC-B22D-04A2CE10B219}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kentico.ConsoleApp", "src\Kentico.ConsoleApp\Kentico.ConsoleApp.csproj", "{4B9EB32B-97A0-44FC-B22D-04A2CE10B219}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
