@@ -11,8 +11,9 @@ public static class Job1
             .OnSite(1)
             .PublishedVersion()
             .Culture("en-US")
-            .CombineWithDefaultCulture();
+            .CombineWithDefaultCulture()
+            .FirstOrDefault();
 
-        Console.WriteLine(homePage.Name);
+        Console.WriteLine(homePage?.DocumentName);
     }
 }
