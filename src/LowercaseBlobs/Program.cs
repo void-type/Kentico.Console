@@ -1,4 +1,5 @@
-﻿using Azure.Storage.Blobs;
+﻿using System.Diagnostics;
+using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Microsoft.Extensions.Configuration;
 
@@ -14,10 +15,15 @@ var prefix = blobConfig.GetValue<string>("Prefix") ?? throw new ArgumentNullExce
 var service = new BlobServiceClient(storageConnectionString);
 var container = service.GetBlobContainerClient(containerName);
 
-Console.WriteLine("Started!");
+var startedTime = Stopwatch.GetTimestamp();
+Console.WriteLine($"Started at {DateTimeOffset.Now}");
+
+var blobCount = 0;
 
 await foreach (BlobItem sourceBlobItem in container.GetBlobsAsync(prefix: prefix))
 {
+    blobCount++;
+
     var lowerName = sourceBlobItem.Name.ToLower();
 
     if (sourceBlobItem.Name != lowerName)
@@ -47,4 +53,6 @@ await foreach (BlobItem sourceBlobItem in container.GetBlobsAsync(prefix: prefix
     }
 }
 
-Console.WriteLine("Done!");
+var elapsed = TimeSpan.FromTicks(Stopwatch.GetTimestamp() - startedTime);
+
+Console.WriteLine($"Finished in {elapsed} seconds at {DateTimeOffset.Now}. {blobCount} total blobs processed.");
